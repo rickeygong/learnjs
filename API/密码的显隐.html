@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码的显隐</title>
+</head>
+
+<body>
+    <div class="box">
+        <label for="">
+            密码:
+        </label>
+        <input type="password" class="pwd"><button class="eye">显示密码</button>
+    </div>
+
+    <script>
+        var eye = document.querySelector(".eye");
+        var pwd = document.querySelector(".pwd");
+        var flag = 0;
+        eye.onclick = function () {
+            // 点击一次之后， flag 一定要变化
+            if (flag == 0) {
+                pwd.type = "text";
+                eye.innerHTML = "隐藏密码"
+                flag = 1;
+            } else {
+                pwd.type = "password";
+                eye.innerHTML = "显示密码";
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
