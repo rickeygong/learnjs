@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+
+    <script>
+        // 传统注册事件
+        var btn = document.querySelectorAll('button');
+        btn[0].onclick = function () {
+            alert('Hi,Rickey1');
+        }
+
+        btn[0].onclick = function () {
+            alert('Hi,Rickey2');
+        }
+
+        // 方法监听注册事件
+        btn[1].addEventListener('click', function () {
+            alert('Hi,Bob1')
+        });
+        btn[1].addEventListener('click', function () {
+            alert('Hi,Bob2')
+        });
+
+
+    </script>
+</body>
+
+</html>
