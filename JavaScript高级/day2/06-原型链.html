@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Star(uname, uage) {
+        this.uname = uname;
+        this.uage = uage;
+    }
+    Star.prototype.sing = function () {
+        console.log('I can sing!')
+    }
+    var ldh = new Star('刘德华', 18);
+    var zxy = new Star('张学友', 18);
+    // 1.只有是对象就会有 prototype
+    console.log(Star.prototype);// Star原型对象prototype__proto__指向的是 Object
+    console.log(Star.prototype.__proto__ === Object.prototype);// true
+    // 2.我们start原型对象里面的__proto__原型指向的是Object.prototype
+    console.log(Object.prototype.__proto__);// null
+</script>
+
+</html>

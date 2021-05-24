@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.构造函数问题
+        function Start(uname, uage) {
+            this.uname = uname;
+            this.uage = uage;
+            // this.sing = function () {
+            //     console.log('I can sing!')
+            // }
+
+        }
+        Start.prototype.sing = function () {
+            console.log('I can sing!')
+        }
+
+        var ldh = new Start('刘德华', 18);// 单独开辟一个内存空间，浪费内存
+        var zxy = new Start('张学友', 18);// 单独开辟一个内存空间，浪费内存
+
+        console.log(ldh.sing === zxy.sing);// true
+        console.dir(Start);// prototype: {constructor: ƒ} 原型对象
+
+        // 2.一般情况下，我们公共属性定义到构造函数里面，公共的方法放到原型对象里面 prototype
+    </script>
+</body>
+
+</html>
